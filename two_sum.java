@@ -23,11 +23,14 @@ class Solution {
         int[] res=new int[2];
         for(int i=0;i<nums.length;i++)
         {
-            if(nums[i]+nums[i+1]==target)
+            for(int j=i+1;j<nums.length;j++)
             {
-                res[0]=i;
-                res[1]=i+1;
-                break;
+                if((nums[i]+nums[j])==target)
+                {
+                    res[0]=i;
+                    res[1]=j;
+                    break;
+                }
             }
                 
         }
