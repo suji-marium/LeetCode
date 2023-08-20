@@ -1,3 +1,5 @@
+//Return the number of perfect squares from an array of random numbers
+
 #include <stdio.h>
 #include <math.h>
 
