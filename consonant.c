@@ -31,3 +31,37 @@ int main()
     
     printf("No of strings containing only consonants is %d",c);
 }
+
+
+or
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[][10]={"suji","sumi","helo","cry","fly"};
+    int c=0,flag;
+    int n=sizeof(a)/sizeof(a[0]);
+    
+    for(int i=0;i<n;i++)
+    {
+        flag=0;
+        for(int j=0;j<strlen(a[i]);j++)
+        {
+            if(a[i][j]=='a'|| a[i][j]=='e'|| a[i][j]=='i'|| a[i][j]=='o'|| a[i][j]=='u'|| a[i][j]=='A'|| a[i][j]=='E'|| a[i][j]=='I'|| a[i][j]=='O'|| a[i][j]=='U')
+            {
+                flag=1;
+                break;
+            }
+            
+        }
+        if(flag==0)
+        {
+            printf("%s\n",a[i]);
+            c=c+1;
+        }
+
+    }
+    printf("%d",c);
+}
